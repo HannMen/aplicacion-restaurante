@@ -1,0 +1,47 @@
+.menu-section {
+    background-color: #fff;
+    padding: 40px 0;
+    margin-bottom: 30px; /* Add margin bottom */
+  }
+  
+  .menu-section .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .menu-section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .menu-section h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .menu-section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .card {
+    border: none;
+  }
+  
+  .card-img-top {
+    object-fit: cover;
+    height: 200px;
+  }
+  
+  .menu-section ul li {
+    margin-bottom: 10px;
+    font-size: 12px; /* Add smaller font size */
+  }

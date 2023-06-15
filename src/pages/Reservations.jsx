@@ -1,17 +1,16 @@
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ContactUsC from "../components/ContactUsC";
+import ReservationsC from "../components/ReservationsC";
 
 
-
-const ContactUs = () => {
+const Reservations = () => {
   return (
     <>
       <NavBar />
-      <ContactUsC />
+      <ReservationsC />
       <Footer />
     </>
   );
 };
 
-export default ContactUs;
+export default Reservations;

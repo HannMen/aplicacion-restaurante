@@ -1,0 +1,31 @@
+
+
+.banner-image {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .banner-image img {
+    width: 30%;
+  }
+
+
+  .carousel-item {
+    text-align: center;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+  }
+  
+  .carousel-control-prev-icon:before,
+  .carousel-control-next-icon:before {
+    color: white;
+  }
+  

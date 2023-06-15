@@ -1,13 +1,14 @@
-import GeneralInfo from "./pages/GeneralInfo";
-import ContactUs from "./pages/ContactUs";
-import Location from "./pages/Location";
+import AppRouter from "./router/AppRouter";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
+
+
 
 const App = () => {
   return (
     <>
-      <GeneralInfo />
-      <ContactUs />
-      <Location />
+      <AppRouter />
     </>
   );
 };

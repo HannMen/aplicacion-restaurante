@@ -1,0 +1,28 @@
+.container {
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.btn {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.reservationsform {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  
+
+.reservationstable {
+  height: 15vh; /* Adjust the height as needed */
+  padding-left: 200px;
+  padding-right: 200px;
+}
