@@ -17,7 +17,7 @@ const ReservationsC = () => {
   const [mail, setMail] = useState("");
   const [phone, setPhone] = useState(0);
   const [date, setDate] = useState("");
-  const [table, setTable] = useState("0");
+  const [table, setTable] = useState(0);
 
   const [formUpdate, setFormUpdate] = useState(false);
   const [item, setItem] = useState(null);
@@ -68,102 +68,117 @@ const ReservationsC = () => {
 
   return (
     <div>
-      <div className="reservationsform">
-        <h1>Reservations</h1>
-
+      <div className="container">
         <div className="row mb-3">
-          <div className="col-md-3">
+          <div className="col-md-6 col-lg-3">
             <input
               type="text"
               className="form-control"
               placeholder="Nombre"
               onChange={(e) => {
-                setName(e.target.value);
+                setNombre(e.target.value);
               }}
             />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-6 col-lg-3">
             <input
-              type="text"
+              type="email"
               className="form-control"
               placeholder="Correo"
               onChange={(e) => {
-                setMail(e.target.value);
+                setCorreo(e.target.value);
               }}
             />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-6 col-lg-3">
             <input
-              type="tel"
+              type="text"
               className="form-control"
-              placeholder="Telefono"
+              placeholder="Teléfono"
               onChange={(e) => {
-                setPhone(e.target.value);
+                setTelefono(e.target.value);
               }}
             />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-6 col-lg-3">
             <input
-              type="datetime-local"
+              type="date"
               className="form-control"
               placeholder="Fecha"
               onChange={(e) => {
-                setDate(e.target.value);
+                setFecha(e.target.value);
               }}
             />
           </div>
         </div>
         <div className="row mb-3">
-          <div className="col-md-3">
+          <div className="col-md-6 col-lg-3">
             <input
               type="text"
               className="form-control"
               placeholder="Mesa"
               onChange={(e) => {
-                setTable(e.target.value);
+                setMesa(e.target.value);
               }}
             />
           </div>
-          <div className="col-md-3">
-            <button className="btn btn-primary" onClick={createUser}>
-              Enviar
-            </button>
-          </div>
+          {formUpdate ? (
+            <div className="col-sm-6 col-lg-3">
+              <button
+                className="btn btn-primary"
+                onClick={() => onUpdate(item.id)}
+              >
+                Actualizar
+              </button>
+              <button
+                className="btn btn-secondary"
+                onClick={() => setFormUpdate(false)}
+              >
+                Cancelar
+              </button>
+            </div>
+          ) : (
+            <div className="col-sm-6 col-lg-3">
+              <button className="btn btn-primary" onClick={createUser}>
+                Agregar Reserva
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
-      <div className="reservationstable">
+      <div className="reservationslist container">
         <table className="table">
           <thead>
             <tr>
               <th scope="col">Nombre</th>
               <th scope="col">Correo</th>
               <th scope="col">Telefono</th>
-              <th scope="col">Fecha y Hora</th>
+              <th scope="col">Fecha</th>
               <th scope="col">Mesa</th>
               <th scope="col">Acciones</th>
             </tr>
           </thead>
           <tbody>
-            {users.map((item) => (
-              <tr key={item.id}>
-                <td>{item.nombre}</td>
-                <td>{item.correo}</td>
-                <td>{item.telefono}</td>
-                <td>{item.fecha}</td>
-                <td>{item.mesa}</td>
+            {users.map((user) => (
+              <tr key={user.id}>
+                <td>{user.nombre}</td>
+                <td>{user.correo}</td>
+                <td>{user.telefono}</td>
+                <td>{user.fecha}</td>
+                <td>{user.mesa}</td>
                 <td>
                   <button
-                    className="btn btn-danger"
-                    onClick={() => borrarUsuario(item.id)}
+                    className="btn btn-primary"
+                    onClick={() => formUpdateOpen(user)}
                   >
-                    Borrar
+                    Edit
                   </button>
                   <button
-                    className="btn btn-info"
-                    onClick={() => formUpdateOpen(item)}
+                    className="btn btn-danger"
+                    onClick={() => borrarUsuario(user.id)}
                   >
-                    Editar
+                    Delete
                   </button>
                 </td>
               </tr>
@@ -171,55 +186,6 @@ const ReservationsC = () => {
           </tbody>
         </table>
       </div>
-
-      {formUpdate && (
-        <div>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Nombre"
-            value={item.nombre}
-            name="nombre"
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Correo"
-            value={item.correo}
-            name="correo"
-            onChange={handleChange}
-          />
-          <input
-            type="number"
-            className="form-control"
-            placeholder="Telefono"
-            value={item.telefono}
-            name="telefono"
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Fecha (mm/dd/yyyy)"
-            value={item.fecha}
-            name="fecha"
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Mesa"
-            value={table}
-            onChange={(e) => {
-              setTable(e.target.value);
-            }}
-          />
-          <button className="btn btn-success" onClick={() => onUpdate(item.id)}>
-            Guardar
-          </button>
-        </div>
-      )}
     </div>
   );
 };
