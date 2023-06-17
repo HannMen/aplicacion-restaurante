@@ -2,18 +2,18 @@ import "../styles/blog.css";
 
 const BlogC = () => {
   return (
-    <div className="container">
+    <div className="blog-container">
       <h2 className="blog-title text-center">Latest Blog Posts</h2>
       <div className="row">
         <div className="col-md-6">
           <div className="card blog-card">
-            <img src="image1.jpg" className="card-img-top" alt="Blog Post 1" />
+            <img src="./src\assets\freshtomatobruschetta.jpg" className="card-img-top" alt="Blog Post 1" />
             <div className="card-body">
-              <h5 className="card-title">Post Title 1</h5>
+              <h5 className="card-title">Favorite One</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                aliquet, ligula in feugiat feugiat, odio sapien fringilla
-                sapien, ac sagittis tellus turpis eu elit.
+                My favorite restaurant in Paris, Delicious Bites produces
+                thrilling cuisine in pursuit of pleasure rather than
+                perfectionism.
               </p>
               <a href="#" className="btn btn-primary">
                 Read More
@@ -23,14 +23,12 @@ const BlogC = () => {
         </div>
         <div className="col-md-6">
           <div className="card blog-card">
-            <img src="image2.jpg" className="card-img-top" alt="Blog Post 2" />
+            <img src="./src\assets\filetmignon.jpg" className="card-img-top" alt="Blog Post 2" />
             <div className="card-body">
-              <h5 className="card-title">Post Title 2</h5>
+              <h5 className="card-title">Understated</h5>
               <p className="card-text">
-                Sed pretium erat in lorem consectetur, vitae gravida lectus
-                ultrices. Nulla efficitur mi risus, ac vulputate risus lacinia
-                nec. Quisque molestie, felis sit amet maximus bibendum, urna dui
-                cursus lorem, nec venenatis ex metus ac sapien.
+                Delicious Bites understated amazing food aims to stun with
+                simplicity in a setting that rivals the three star cooking.
               </p>
               <a href="#" className="btn btn-primary">
                 Read More
@@ -40,13 +38,12 @@ const BlogC = () => {
         </div>
         <div className="col-md-6">
           <div className="card blog-card">
-            <img src="image3.jpg" className="card-img-top" alt="Blog Post 3" />
+            <img src="./src\assets\lobsterbisque.jpg" className="card-img-top" alt="Blog Post 3" />
             <div className="card-body">
-              <h5 className="card-title">Post Title 3</h5>
+              <h5 className="card-title">Bill issues</h5>
               <p className="card-text">
-                Maecenas ut semper turpis. Suspendisse commodo libero elit, et
-                posuere ex congue sed. Nunc maximus neque vel velit vulputate
-                aliquet. In suscipit tortor eget elementum consectetur.
+                A meal where the food was ok but service and issues with the
+                bill made sure it would be memorable in all of the wrong ways.
               </p>
               <a href="#" className="btn btn-primary">
                 Read More
@@ -56,13 +53,12 @@ const BlogC = () => {
         </div>
         <div className="col-md-6">
           <div className="card blog-card">
-            <img src="image4.jpg" className="card-img-top" alt="Blog Post 4" />
+            <img src="./src\assets\quinoa.jpg" className="card-img-top" alt="Blog Post 4" />
             <div className="card-body">
-              <h5 className="card-title">Post Title 4</h5>
+              <h5 className="card-title">Best in the area</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                aliquet, ligula in feugiat feugiat, odio sapien fringilla
-                sapien, ac sagittis tellus turpis eu elit.
+                A unique blend of Multicultural cooking, Delicious Bites third
+                star was well earned. One of the best restaurants in the area.
               </p>
               <a href="#" className="btn btn-primary">
                 Read More

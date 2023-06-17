@@ -6,7 +6,7 @@ const NavBar = () => {
       <header className="header">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               <img
                 src="./src/assets/headerlogo.jpg"
                 alt="logo"
